@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Desing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        body{
+            margin: 50px 100px;
+            background-color: rgb(247, 236, 236);
+        }
+        .container{
+            display: flex;
+            justify-content: space-between;
+        }
+        .container-1{
+            display: flex;
+            justify-content: space-between;
+        }
+        .card{
+            width: 300px;
+            /* border: 2px solid black; */
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+            background-color: #fff;
+            transition: 0.3s;
+        }
+        .card:hover{
+            box-shadow: none;
+        }
+        .card-body{
+            padding: 20px;
+        }
+        .card-title{
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-weight: bolder;
+            font-size: 20px;
+        }
+        .card-para{
+            margin-bottom: 0;
+        }
+
+        .img-card{
+            width: 100%;]
+            display: block;
+        }
+        .card-icon{
+            margin: 30px;
+        }
+        .add-to-cart{
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 50%;
+            background: #364f6b;
+            margin-left: auto;
+            display: block;
+            margin-top: -25px;
+            margin-right: 15px;
+            position: relative;
+        }
+        .see-more{
+            width: 150px;
+            height: 40px;
+            background-image: url(/leranCSS/img/bg-image.jpg);
+            background-size: cover;
+            /* background-color: black; */
+            color: white;
+            border: none;
+            border-radius: 10px;
+            display: block;
+            margin: auto;
+            margin-bottom: -15px;
+        }
+
+        .text-center{
+            text-align: center;
+        }
+        .text-right{
+            text-align: right;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-title">Card Design Testing</p>
+                <p class="card-para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A, nemo fugit
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body text-center">
+                <p class="card-title">Card Design Testing</p>
+                <p class="card-para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A, nemo fugit
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body text-right">
+                <p class="card-title">Card Design Testing</p>
+                <p class="card-para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A, nemo fugit
+                </p>
+            </div>
+        </div>  
+    </div>
+
+    <br><br><br>
+
+    <div class="container-1">
+        <div class="card">
+            <img src="/leranCSS/img/poe-square.jpg" alt="" class="img-card">
+            <div class=" card-body">
+                <p class="card-title">Card Design Testing</p>
+                <p class="card-para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A, nemo fugit
+                </p>
+            </div>
+        </div>
+        <div class="card" style="margin-top: 100px; background-image: url(/leranCSS/img/bg-image.jpg); background-size: cover; overflow: visible;">
+            <div class=" card-body text-center">
+                <i class="fas fa-graduation-cap card-icon fa-7x"></i>
+                <p class="card-title">Card Design Testing</p>
+                <p class="card-para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A, nemo fugit
+                </p>
+                
+            </div>
+            <button class="see-more">See More</button>
+        </div>
+        <div class="card" style="margin-top: 100px;">
+            <img src="/leranCSS/img/16-inch-macbook-pro-m2-render.jpg" alt="" class="img-card">
+            <button class="add-to-cart">
+                <i class="fas fa-plus"></i>
+            </button>
+            <div class=" card-body">
+                <p class="card-title">New Macbook Pro 2021</p>
+                <p class="card-para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A, nemo fugit
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

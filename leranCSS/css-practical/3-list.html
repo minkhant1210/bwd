@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .header{
+            text-align: center;
+            color: #2196f3;
+            margin-bottom: 10px;
+        }
+        span{
+            color: #d81457;
+        }
+
+        .container{
+            height: 40vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .list-1{
+            list-style-type: persian;
+            font-size: 20px;
+            border-right: 2px solid #9a9a9a;
+            padding-right: 180px;
+        }
+        .list-2{
+            list-style: none;
+            width: 200px;
+            border: 2px solid grey;
+        }
+        .list-2 li{
+            border: 2px solid grey;
+            padding: 10px 15px;
+            margin: 5px 2px;
+        }
+        .list-2 li:last-child{
+            margin-bottom: none;
+        }
+        .list-2 li:nth-child(odd){
+            background-color: rgb(229, 210, 182);
+        }
+
+        .list-3{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 2px solid gray;
+            width: 100%;
+            padding: 15px 20px;
+            text-align: right;
+        }
+        .list-3 li{
+            display: inline;
+            border: 2px solid gray;
+            padding: 10px 15px;
+            margin: 0px 5px;
+        }
+        .list-3 li:hover, .list-3 li.active{
+            background-color: #713045;
+            color: #f6ea8c;
+            border: none;
+        }
+        .list-3 li:last-child{
+            margin-right: 0px;
+        }
+        .list-4{
+            margin-top: 20px;
+            margin-left: 20px;
+            list-style-type: none;
+        }
+        .list-4 li{
+            margin-bottom: 10px;
+            background-color: #a6fff2;
+            padding: 10px 15px;
+            width: 200px;
+        }
+        .list-4 li:hover, .list-4 li.active{
+            border-left: 10px solid #2f89fc;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="header">List <span>Style</span></h1>
+    <div class="container">
+        <ul class="list-1">
+            <li>apple</li>
+            <li>orange</li>
+            <li>tamarind</li>
+            <li>jackFruit</li>
+            <li>Durian</li>
+        </ul>
+        <ul class="list-2">
+            <li>apple</li>
+            <li>orange</li>
+            <li>tamarind</li>
+            <li>jackFruit</li>
+            <li>Durian</li>
+        </ul>
+    </div>
+    <hr>
+
+    <ul class="list-3">
+        <li>apple</li>
+        <li>orange</li>
+        <li>tamarind</li>
+        <li class="active">jackFruit</li>
+        <li>Durian</li>
+    </ul>
+    <hr>
+
+    <ul class="list-4">
+        <li>apple</li>
+        <li class="active">orange</li>
+        <li>tamarind</li>
+        <li>jackFruit</li>
+        <li>Durian</li>
+    </ul>
+
+
+</body>
+</html>

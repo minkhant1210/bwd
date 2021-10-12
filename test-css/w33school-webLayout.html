@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Layout</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header{
+            background-color: gray;
+            color: whitesmoke;
+            padding: 30px;
+            border-radius: 5px;
+        }
+
+        .clearfix::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .column{
+            float: left;
+            /* margin-top: 10px; */
+            padding: 15px;
+        }
+        .menu ul{
+            list-style-type: none;
+        }
+        .menu li{
+            margin-bottom: 10px;
+            background-color: blueviolet;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .menu li:hover{
+            background-color: rgb(153, 147, 147);
+        }
+        .menu{
+            width: 25%
+        }
+        .content{
+            width: 75%;
+        }
+        
+        .footer{
+            background-color: grey;
+            padding: 20px;
+            border-radius: 5px;
+            color: whitesmoke;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="header">
+        <h1>China</h1>
+    </div>
+
+    <div class="clearfix">
+        <div class="column menu">
+            <ul>
+                <li>The Flight</li>
+                <li>The City</li>
+                <li>The Island</li>
+                <li>The Food</li>
+            </ul>
+        </div>
+
+        <div class="column content">
+            <h1>The City</h1>
+            <p>Chania is the capital of the Chania region on the island of Crete.
+                 The city can be divided in two parts, the old town and the modern city.
+            </p><br>
+            <p>You will learn more about web layout and
+                 responsive web pages in a later chapter.
+            </p>
+        </div>
+    </div>
+
+    <div class="footer">Footer text</div>
+
+</body>
+</html>

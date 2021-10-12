@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar{
+            list-style: none;
+            background-color: cadetblue;
+            border-radius: 5px;
+            overflow: auto;
+            
+        }
+        .navbar li{
+            float: left;
+        }
+        .navbar li a{
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 10px 20px;
+        }
+        .navbar li a:hover{
+            background-color: darkblue;
+            color: darkorange;
+        }
+
+        a{
+            text-decoration: none;
+        }
+        .btn{
+            background-color: darkorchid;
+            /* border: none; */
+            color: darkred;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-left: 15px;
+        }
+        .btn:hover{
+            color: white;
+            background-color: firebrick;
+        }
+
+        .my-form{
+            padding: 20px 20px;
+        }
+        .my-form .form-group{
+            margin-bottom: 15px;
+        }
+        .form-group label{
+            display: block;
+        }
+        .my-form  input[type="text"], textarea{
+            pad: 20px;
+            width: 100%;
+        }
+        
+
+    </style>
+</head>
+<body>
+    
+    <ul class="navbar">
+        <li><a href="#">home</a></li>
+        <li><a href="#">about</a></li>
+        <li><a href="#">info</a></li>
+        <li><a href="#">contact</a></li>
+    </ul>
+    <br>
+
+    <a href="#" class="btn">Click here</a>
+    <br>
+
+    <div style="margin-top: 20px;"></div>
+    <div class="my-form">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name">
+        </div>
+        <div class="form-group">
+            <label for="email">email</label>
+            <input type="text" id="email">
+        </div>
+        <div class="form-group">
+            <label for="name">message</label>
+           <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        </div>
+        <input type="submit">
+    </div>
+
+</body>
+</html>

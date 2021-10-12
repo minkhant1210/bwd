@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Practical</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,100;1,500&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+            font-family: 'Roboto', sans-serif;
+            color: #581b98;
+        }
+        .label{
+            display: flex;
+            flex-direction: column;
+            /* width: 30%; */
+            height: 40vh;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            /* background-color: grey; */
+            
+        }
+        .input1, .input2 {
+            display: block;
+            padding: 5px 10px ;
+            margin-top: 10px;
+            border-radius: 15px;
+            /* border: none; */
+            /* background-color: blue; */
+        }
+        input:focus{
+            outline: none;
+        }
+        .input1{
+            margin-bottom: 10px;
+        }
+        #btn{
+            margin-top: 20px;
+            padding: 10px;
+            border: none;
+            background-color: #00bcd4;
+            border-radius: 10px;
+            color: #fff;
+        }
+        #btn:active{
+            background-color: #0d7280;
+        }
+
+        .currency{
+            display: inline-block;
+            margin-left: 100px;
+        }
+        .input3{
+            padding: 5px 10px;
+            margin-top: 10px;
+            border-radius: 10px;
+            margin-left: 10px;
+        }
+        .btn{
+            padding: 5px;
+            border: none;
+            background-color: #00bcd4;
+            border-radius: 10px;
+            color: #fff;
+        }
+        .btn:active{
+            background-color: #0d7280;
+        }
+        #sgd{
+            margin-bottom: 20px;
+        }
+
+        #amount{
+            width: 150px;
+            padding: 5px 10px;
+            margin-top: 20px;
+            border-radius: 10px;
+            margin-left: 50px;
+            margin-bottom: 30px;
+            margin-left: 60px;
+        }
+        #appleBtn{
+            width: 50px;
+            height: 50px;
+            background-color: #cb3b3b;
+            border: none;
+            border-radius: 50%;
+            color: #fff;
+            margin-right: 50px;
+        }
+        #appleBtn:hover{
+            background-color: #8a0d0d;
+            box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+
+        }
+        #orangeBtn{
+            width: 50px;
+            height: 50px;
+            background-color: #e0c45c;  
+            border: none;
+            border-radius: 50%;
+            color: #fff;
+            margin-right: 50px;
+        }
+        #orangeBtn:hover{
+            background-color: #b89d3c;
+            box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+
+        }
+        #mangoBtn{
+            width: 50px;
+            height: 50px;
+            background-color: #ff9800;  
+            border: none;
+            border-radius: 50%;
+            color: #fff;
+        }
+        #mangoBtn:hover{
+            background-color: #dd901d;
+            box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+
+        }
+
+        input:focus{
+            background-color: gray;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="label">
+        <label for="width">Enter width</label>
+        <input type="number" name="width" id="width" class="input1">
+
+        <label for="width">Enter breadth</label>
+        <input type="number" name="breadth" id="breadth" class="input2">
+
+        <button id="btn">click me</button>
+    </div>
+    <hr>
+
+    <div class="currency">
+        <label for="usd">USD to MMk</label>
+        <input type="number" name="usd" id="usd" class="input3">
+        <button id="btn1" class="btn">click</button>
+        <br>
+        <label for="eur">EUR to MMk</label>
+        <input type="number" name="usd" id="eur" class="input3">
+        <button id="btn2" class="btn">click</button>
+        <br>
+        <label for="sgd">SGD to MMk</label>
+        <input type="number" name="usd" id="sgd" class="input3">
+        <button id="btn3" class="btn">click</button>
+    </div>
+    <hr>
+
+    <div class="fruit currency">
+        <input type="number" name="amount" id="amount" placeholder="Number of Fruits" class="fruitInput"><br>
+        <button id="appleBtn">Apple</button>
+        <button id="orangeBtn">Orange</button>
+        <button id="mangoBtn">Mango</button>
+    </div>
+
+
+
+<script>
+
+//AREA
+let areaArr = [];
+
+let button = document.querySelector("#btn");
+let input1 = document.querySelector(".input1");
+let input2 = document.querySelector(".input2");
+
+let index = 0;
+button.onclick = function(e, f){
+    e = document.querySelector("#width").value;
+    f = document.querySelector("#breadth").value;
+    let area1 = e * f;
+    areaArr.push(area1);
+    // console.log(areaArr);
+    areaArr[index] = {
+        width: e,
+        breadth: f,
+        result: area1
+    };
+    index++;
+    console.log(areaArr);
+    console.table(areaArr);
+    
+    input1.value = "";
+    input2.value = "";
+}
+
+//EXCHANGE RATE
+
+let rate = {
+    usd: 1636,
+    eur: 1933,
+    sgd: 1208
+};
+
+let btn1 = document.querySelector("#btn1")
+btn1.onclick = function(btn1Value, usd){
+    btn1Value = document.querySelector("#usd").value
+    usd = rate.usd;
+    let result = btn1Value * usd;
+    console.log(btn1Value + " USD to MMK is", result +" kyats");
+}
+
+let btn2 = document.querySelector("#btn2")
+btn2.onclick = function(btn2Value, eur){
+    btn2Value = document.querySelector("#eur").value
+    eur = rate.eur;
+    let result = btn2Value * eur;
+    console.log(btn2Value + " EUR to MMK is", result +" kyats");
+}
+
+let btn3 = document.querySelector("#btn3")
+btn3.onclick = function(btn3Value, sgd){
+    btn3Value = document.querySelector("#sgd").value
+    sgd = rate.sgd;
+    let result = btn3Value * sgd;
+    console.log(btn3Value + " SGD to MMK is", result +" kyats");
+}
+
+
+// FRUITS
+
+let fruitPrice = {
+    apple: 100,
+    orange: 250,
+    mango: 320
+};
+
+let appleBtn = document.querySelector("#appleBtn");
+let orangeBtn = document.querySelector("#orangeBtn");
+let mangoBtn = document.querySelector("#mangoBtn");
+let fruitInput = document.querySelector(".fruitInput");
+
+function tax(cost, percentage = 5){
+    return (cost * percentage)/100;
+}
+
+appleBtn.onclick = function(amount, fruit){
+    amount = document.querySelector("#amount").value;
+    fruit = fruitPrice.apple;
+    let calc = amount * fruit;
+    let result = calc + "MMk";
+     totalCost = {
+        name: "apple",
+        amount: amount,
+        price: fruit,
+        cost: calc,
+        taxcost: tax(calc),
+        total: calc + tax(calc)
+    };
+    console.log(totalCost);
+    console.table(totalCost);
+    fruitInput.value = "";
+}
+
+orangeBtn.onclick = function(amount, fruit){
+    amount = document.querySelector("#amount").value;
+    fruit = fruitPrice.orange;
+    let calc = amount * fruit;
+    let result = calc + "MMk";
+     totalCost = {
+        name: "orange",
+        amount: amount,
+        price: fruit,
+        cost: calc,
+        taxcost: tax(calc),
+        total: calc + tax(calc)
+    };
+    console.log(totalCost);
+    console.table(totalCost);
+    fruitInput.value = "";
+}
+
+mangoBtn.onclick = function(amount, fruit){
+    amount = document.querySelector("#amount").value;
+    fruit = fruitPrice.mango;
+    let calc = amount * fruit;
+    let result = calc + "MMk";
+     totalCost = {
+        name: "mango",
+        amount: amount,
+        price: fruit,
+        cost: calc,
+        taxcost: tax(calc),
+        total: calc + tax(calc)
+    };
+    console.log(totalCost);
+    console.table(totalCost);
+    fruitInput.value = "";
+}
+
+
+
+</script>
+    
+</body>
+</html>

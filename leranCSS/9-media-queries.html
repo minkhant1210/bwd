@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: cyan;
+        }
+        p{
+            border: 1px solid gray;
+            padding: 20px;
+            width: 45%;
+            display: inline-block;
+        }
+        p:last-child{
+            width: 90%;
+            margin-top: 10px;
+        }
+        @media screen and (max-width: 480px){
+            body{
+                background-color: skyblue;
+                text-align: center;
+            }
+            p{
+                width: 90%;
+                margin-bottom: 10px;
+            }
+            p:first-child{
+                margin-top: 20px;
+            }
+            p:last-child{
+                margin-top: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis deserunt officia minima laborum dicta, quod aut ducimus deleniti debitis ut dignissimos doloremque a asperiores vero ipsam! Qui provident ratione quo.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A odit provident doloremque labore laboriosam nostrum velit distinctio itaque. Ex aspernatur, quidem consequatur at fugiat voluptatem accusamus cum blanditiis illum tempore?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis deserunt officia minima laborum dicta, quod aut ducimus deleniti debitis ut dignissimos doloremque a asperiores vero ipsam! Qui provident ratione quo.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A odit provident doloremque labore laboriosam nostrum velit distinctio itaque. Ex aspernatur, quidem consequatur at fugiat voluptatem accusamus cum blanditiis illum tempore?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis deserunt officia minima laborum dicta, quod aut ducimus deleniti debitis ut dignissimos doloremque a asperiores vero ipsam! Qui provident ratione quo.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A odit provident doloremque labore laboriosam nostrum velit distinctio itaque. Ex aspernatur, quidem consequatur at fugiat voluptatem accusamus cum blanditiis illum tempore?
+        </p>
+    </div>
+
+</body>
+</html>

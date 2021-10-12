@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p:first-child i{
+            font-size: 20px;
+            color: blue;
+        }
+        .p{
+            color: red;
+        }
+        .box{
+            width: 400px;
+            margin: 100px auto;
+            border: 2px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        .box:hover{
+            background-color: rgb(197, 209, 233);
+            color: rgb(171, 19, 218);
+        }
+        .box:active{
+            background-color: gray;
+            color: wheat;
+        }
+        #text{
+            padding: 20px;
+            margin: 50px 100px;
+        }
+        #text:focus{
+            background-color: teal;
+            color: whitesmoke;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+    <p class="p">I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+    <div class="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Deleniti laboriosam voluptates corporis est iure officiis, possimus hic iusto a?
+            Perspiciatis quas commodi ad quidem error dolorum, dolorem illum ipsam provident?
+        </p>
+    </div>
+
+    
+
+    <textarea name="text" id="text" cols="30" rows="10"></textarea>
+</body>
+</html>

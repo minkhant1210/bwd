@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        *{
+            font-family: 'Montserrat', sans-serif;
+        }
+        .btn{
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            border: 2px solid grey;
+            transition: 0.2s;
+        }
+
+        .btn-primary{
+            background-color: #0c3c63;
+        }
+        .btn-primary:active{
+            background-color: #062641;
+            border-color: #062641;
+        }
+
+        .btn-secondary{
+            background-color: #ff5722;
+        }
+        .btn-secondary:active{
+            background-color: #ce451c;
+            border-color: #ce451c;
+        }
+
+        .btn-dark{
+            background-color: black;
+        }
+        .btn-dark:active{
+            background-color: rgb(63, 62, 62);
+        }
+
+        .btn-outline-primary{
+            background-color: #fff;
+            color: #0c3c63 ;
+            border-color: #0c3c63;
+        }
+        .btn-outline-primary:hover{
+            background-color: #0c3c63;
+            color: #fff;
+        }
+        .btn-outline-primary:active{
+            background-color: #082741;
+            border-color: #082741;
+        }
+
+        .roounded{
+            border-radius: 30px;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <button class="btn btn-primary">Normal-Button</button>
+    <a href="" class="btn btn-primary">A-Tag-Button</a>
+
+    <button class="btn btn-secondary">Secondary-Button</button>
+    <button class="btn btn-dark">Dark-Button</button>
+    <hr>
+
+    <button class="btn btn-outline-primary">Outline-Button</button>
+
+    <button class="btn btn-primary">
+        <i class="fab fa-apple"></i>
+    </button>
+
+    <button class="btn btn-outline-primary">
+        <i class="fas fa-arrow-circle-right"></i>
+    </button>
+
+    <hr>
+
+    <button class="btn btn-secondary rounded">Rounded</button>
+    <button class="btn btn-outline-primary rounded">Outline-rounded</button>
+    <hr>
+
+</body>
+</html>
